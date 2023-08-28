@@ -1,0 +1,11 @@
+random_list =  [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+flattened_list = []
+
+def flatten(random_list):
+    for i in random_list:
+        if isinstance(i, list):
+            flatten(i)
+        else:
+            flattened_list.append(i)
+flatten(random_list)
+print(flattened_list)
